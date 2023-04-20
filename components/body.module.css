@@ -1,0 +1,5 @@
+.aboutBlock {
+    display: flex;
+    flex-direction: column;
+}
+
