@@ -19,7 +19,7 @@ const Questionaire = ({questionaireSetter}) => {
     const change = (e) => setQuoteRequest({ ...requestor, [e.target.name]: e.target.value});
 
     const postRequestor = async (requestor) => {
-        await fetch('http://localhost:5000/request/quote', {
+        await fetch('http://localhost:5824/request/quote', {
             method: "POST",
             headers: {
                 // Accept: "application/json",
