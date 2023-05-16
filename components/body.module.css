@@ -3,3 +3,14 @@
     flex-direction: column;
 }
 
+#base, .bodyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.baseColor {
+    background-color: whitesmoke;
+}
+
+

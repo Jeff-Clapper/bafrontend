@@ -14,13 +14,19 @@ const Application = () => {
 
     return (
             <>
-                <Header> Your Cloud Support Experts </Header>
+                {/* Make this it's own component */}
+                {/* <div className="introImg">
+                    <img src="./razvan-chisu-Ua-agENjmI4-unsplash.jpg" id="introImg"></img>
+                    <div className="intro">
+                        <img src="./high-res-black-logo.jpg" className="introLogo"></img>
+                        <h2 className="introHeader">You want to grow. We want to help.</h2>
+                    </div>
+                </div> */}
+                <Header questionaireSetter = { changeQuestionaireState } /> 
                 {
-                    questionaireState ? <Questionaire questionaireSetter = {changeQuestionaireState}/> : <Body questionaireSetter = {changeQuestionaireState} bodyText="We are a veteran owned and operated cloud management company. We have a combined 10 years of working with companies
-                    to provide uniquely-taylored cloud-based support to help them meet their companies demands. In today's increasingly
-                    remote environment, we can assist you with what you need to succeed." /> 
+                    questionaireState ? <Questionaire questionaireSetter = { changeQuestionaireState }/> : <Body questionaireSetter = { changeQuestionaireState }/> 
                 }
-                <Footer />
+                <Footer questionaireSetter = { changeQuestionaireState }/>
             </>
     )
 };

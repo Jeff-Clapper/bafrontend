@@ -33,40 +33,46 @@ const Questionaire = ({questionaireSetter}) => {
     };
 
     return (
-        <div>
+        <div id={ styles.questionaireBody }>
             <h3>We are excited for the opportunity to get to know you, your company, and your companies needs.</h3>
-            <form onSubmit={submit}>
-                <div>
-                    <label>Name:</label>
+            <form onSubmit={ submit } className={ styles.formInputs }>
+                <div className={ styles.input }>
+                    <label className={ styles.label }>Name:</label>
                     <input 
+                        className={ styles.userInput }
                         type="text" 
-                        value={requestor.name} 
+                        value={ requestor.name } 
                         name="name" 
-                        onChange={change}
+                        onChange={ change }
                     />
                 </div>
-                <div>
-                    <label>Company:</label>
-                    <input 
+                <div className={ styles.input }>
+                    <label className={ styles.label }>Company:</label>
+                    <input  
+                        className={ styles.userInput }
                         type="text" 
-                        value={requestor.company} 
+                        value={ requestor.company } 
                         name="company" 
-                        onChange={change}
+                        onChange={ change }
                     />
                 </div>
-                <div>
-                    <label>Email:</label>
+                <div className={ styles.input }>
+                    <label className={ styles.label }>Email:</label>
                     <input 
+                        className={ styles.userInput }
                         type="email" 
-                        value={requestor.email} 
+                        value={ requestor.email } 
                         name="email" 
-                        onChange={change}
+                        onChange={ change }
                     />
                 </div>
-                <div className="contactButtonExterior" onClick={submit}>
-                    <div className="contactButtonInterior">
+                <div className={ styles.input }>
+                    <div onClick = {submit} className="contactButtonInterior">
                         Submit
                     </div>
+                </div>
+                <div className={ styles.returnButton }>
+                    <p onClick={() => {questionaireSetter()}}>Return to Homepage</p>
                 </div>
             </form>
         </div>

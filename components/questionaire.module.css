@@ -1,0 +1,43 @@
+#questionaireBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+    border-radius: 15px;
+    border: #17a569 1px solid;
+    margin: 1%;
+    background-color: white;
+    width: 80vw;
+    position: relative;
+    left: 7.5vw;
+}
+
+.formInputs {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.input {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1%;
+}
+
+.label {
+    text-align: left;
+    width: 30%;
+    font-weight:bolder;
+}
+
+.userInput {
+    width: 70%;
+}
+
+.returnButton {
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bolder;
+    font-size: small;
+    color: #17a569;
+}

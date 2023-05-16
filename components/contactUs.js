@@ -7,10 +7,8 @@ const ContactUs = ({questionaireSetter}) => {
 
     return (
         <div className={styles.contactRow}>
-            <button className="contactButtonExterior" onClick={() => {questionaireSetter()}}>
-                <div className="contactButtonInterior">
-                    Contact Us
-                </div>
+            <button className="contactButtonInterior" onClick={() => {questionaireSetter()}}>
+                Contact Us
             </button>
         </div>
     )

@@ -26,31 +26,70 @@ body {
     rgb(var(--background-start-rgb));
 } */
 
-
-.row {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100px;
-  background-color: black;
+html {
+  background-color: whitesmoke;
 }
 
-.contactButtonExterior {
+#base {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1%;
+}
+
+/* .contactButtonExterior {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
-  /* width: 25%;
-  height: 75%; */
   padding: 2px
-}
+} */
 
 .contactButtonInterior {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #61a96e;
-  height: 50%;
+  /* height: 50%; */
+  width: 100px;
   padding: 5px 10px;
   color: white;
+  border: 2px solid black
 }
+
+.intro {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 0%;
+  width: 75%;
+}
+
+.introImg {
+  display: flex;
+  justify-content: center;
+  /* background-image: url(../razvan-chisu-Ua-agENjmI4-unsplash.jpg); */
+}
+
+.introHeader {
+  color: white;
+}
+
+#introImg {
+  width: 100vw;
+}
+
+.introLogo {
+  width: 10%;
+}
+
+/* USED FOR BODYCOMPONENTS */
+.original, .services, .contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1%;
+}
+
+

@@ -11,6 +11,7 @@ COPY package.json package-lock.json ./
 RUN npm install
 
 COPY . ./
+RUN echo REACT_APP_BODY_DATA=`js-yaml public/properties/bodyComponent.yaml` > .env
 EXPOSE $PORT
 
 CMD npm run start

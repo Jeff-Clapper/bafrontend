@@ -2,12 +2,18 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    /* height: 100px; */
-    /* height: 91%; */
-    /* max-height: 150px; */
-    height: 100px;
-    background-color: black;
+    height: 15vh;
+    background-color: white;
+    border-radius: 15px;
+    border: #17a569 1px solid;
 }
+
+/* .rowBorder {
+    border-bottom: 1px solid #17a569;
+    width: 85vw;
+    position: relative;
+    left: 7.5%;
+} */
 
 .bannerLogo {
     height: 100%;
@@ -29,6 +35,6 @@
 
 .section {
     font-size: 100%;
-    color: white;
+    color: #17a569;
     padding: 2%
 }

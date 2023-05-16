@@ -7,3 +7,11 @@
 .section{
     color: white;
 }
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    background-color: black;
+}
