@@ -1,0 +1,19 @@
+.image {
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#picture {
+    height: 50vh;
+    width: 75%;
+}
+
+.leftRound, .rightRound {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}

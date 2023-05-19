@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import styles from "./questionaire.module.css"
+import styles1 from "./questionaire.module.css"
+import styles2 from "./questionaire.cell.module.css"
 
 
-const Questionaire = ({questionaireSetter}) => {
+const Questionaire = ({questionaireSetter,screenSize}) => {
     const emptyRequestor = {
         name: 'name', 
         company: 'company', 
@@ -19,7 +20,8 @@ const Questionaire = ({questionaireSetter}) => {
     const change = (e) => setQuoteRequest({ ...requestor, [e.target.name]: e.target.value});
 
     const postRequestor = async (requestor) => {
-        await fetch('http://localhost:5824/request/quote', {
+        // await fetch('http://localhost:5824/request/quote', {
+        await fetch('https://emailbackend-rkgklr7fuq-ue.a.run.app/request/quote', {
             method: "POST",
             headers: {
                 // Accept: "application/json",
@@ -32,9 +34,14 @@ const Questionaire = ({questionaireSetter}) => {
         console.log("success")
     };
 
+    let styles = styles1;
+    if (screenSize && screenSize.width < 600){
+        styles = styles2
+    }
+
     return (
         <div id={ styles.questionaireBody }>
-            <h3>We are excited for the opportunity to get to know you, your company, and your companies needs.</h3>
+            <h3 className={ styles.questionaireTitle }>We are excited for the opportunity to get to know you, your company, and your companies needs.</h3>
             <form onSubmit={ submit } className={ styles.formInputs }>
                 <div className={ styles.input }>
                     <label className={ styles.label }>Name:</label>

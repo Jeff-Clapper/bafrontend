@@ -1,7 +1,13 @@
-import styles from "./header.module.css"
+import styles1 from "./header.module.css"
+import styles2 from "./header.cell.module.css"
 
 // Children seems to be a built in option
-const Header = ({questionaireSetter}) => {
+const Header = ({questionaireSetter, screenSize}) => {
+    let styles = styles1;
+    if (screenSize.width < 600){
+        styles = styles2;
+    }
+
     return (
         <>
             <header className={styles.row}>

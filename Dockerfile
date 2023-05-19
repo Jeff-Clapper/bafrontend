@@ -14,4 +14,6 @@ COPY . ./
 RUN echo REACT_APP_BODY_DATA=`js-yaml public/properties/bodyComponent.yaml` > .env
 EXPOSE $PORT
 
+RUN npm run build
+
 CMD npm run start

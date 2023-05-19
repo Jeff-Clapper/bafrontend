@@ -19,7 +19,7 @@
 .formInputs {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 90%;
 }
 
 .input {
@@ -30,7 +30,7 @@
 
 .label {
     text-align: left;
-    width: 30%;
+    width: 40%;
     font-weight:bolder;
 }
 
