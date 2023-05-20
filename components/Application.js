@@ -5,7 +5,6 @@ import Footer from "./footer";
 import Questionaire from "./questionaire"
 
 
-
 const Application = () => {
     const [questionaireState, setQuestionaireState] = useState();
     const [showComponent, setShowComponent] = useState(false);
@@ -34,10 +33,6 @@ const Application = () => {
     // }, [screenSize])
 
 
-    // getCurrentDimension();
-    console.log(screenSize);
-
-
     return (
             <div>
                 {/* Make this it's own component */}
@@ -48,7 +43,8 @@ const Application = () => {
                         <h2 className="introHeader">You want to grow. We want to help.</h2>
                     </div>
                 </div> */}
-                <Header questionaireSetter = { changeQuestionaireState } screenSize= { screenSize } /> 
+
+                <Header questionaireSetter = { changeQuestionaireState } screenSize= { screenSize } />
                 { questionaireState ? <Questionaire questionaireSetter = { changeQuestionaireState } screenSize= { screenSize } /> : <Body questionaireSetter = { changeQuestionaireState } screenSize= { screenSize }/> }
                 <Footer questionaireSetter = { changeQuestionaireState }/>
             </div>

@@ -1,0 +1,12 @@
+.bannerContent {
+    margin: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.section {
+    font-size: 100%;
+    color: #17a569;
+    padding: 2%
+}

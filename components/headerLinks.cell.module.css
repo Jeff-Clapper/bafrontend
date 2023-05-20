@@ -1,0 +1,13 @@
+.bannerContent {
+    margin: 2%;
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+}
+
+.section {
+    font-size: 100%;
+    color: #17a569;
+    padding: 5%;
+    border-bottom: 1px solid #17a569;
+}

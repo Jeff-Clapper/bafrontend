@@ -8,13 +8,6 @@
     border: #17a569 1px solid;
 }
 
-/* .rowBorder {
-    border-bottom: 1px solid #17a569;
-    width: 85vw;
-    position: relative;
-    left: 7.5%;
-} */
-
 .bannerLogo {
     height: 100%;
     width: 25%;
@@ -24,17 +17,4 @@
 
 .logo {
     height: 100%;
-}
-
-.bannerContent {
-    margin: 2%;
-    width: 100%;
-    display: flex;
-    justify-content: right;
-}
-
-.section {
-    font-size: 100%;
-    color: #17a569;
-    padding: 2%
 }
