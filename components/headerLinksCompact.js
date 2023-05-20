@@ -3,31 +3,29 @@ import Hamburger from "./hamburger"
 import HeaderLinks from "./headerLinks";
 import styles from "./headerLinksCompact.module.css"
 
-const HeaderLinksCompact = (props) => {
-    const [ isClicked, setIsClicked ] = useState(false)
+// THIS WILL NEED TO BE TESTED ON CELL BROWSER
 
-    const changeIsClicked = (value) => {
-        setIsClicked(value)
+const HeaderLinksCompact = (props) => {
+    const [ isHovered, setIsHovered ] = useState(false)
+
+    const changeIsHovered = (value) => {
+        setIsHovered(value);
     }
 
     return (
-        <>
-            { isClicked ? 
-                (<div className = { styles.dropDownLinks }>
+        <div className={ `${ isHovered ? styles.dropDownLinks : styles.dropDown }` }
+            onMouseEnter={() => changeIsHovered(true)}
+            onMouseLeave={() => changeIsHovered(false)}
+        >
+            { isHovered ? 
+                (<div className = "test">
                     <HeaderLinks questionaireSetter={ props.questionaireSetter } flexDirection={ props.flexDirection }/>
                 </div> ) : 
-                (<div className = { styles.dropDown }>
-                    <Hamburger isClickedSetter={ changeIsClicked } /> 
+                (<div className = { styles.sdropDowns }>
+                    <Hamburger isHoveredSetter={ changeIsHovered } />
                 </div>)
             }
-        </>
-        // <div className = { styles.dropDown }>
-        //         {/* { isClicked ? 
-        //             (<div className = { styles.dropDownLinks}>
-        //                 <HeaderLinks questionaireSetter={ props.questionaireSetter } flexDirection={ props.flexDirection }/>  
-        //             </div> ) : null 
-        //         } */}
-        // </div>
+        </div>
     )};
 
 

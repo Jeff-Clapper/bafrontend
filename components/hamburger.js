@@ -1,10 +1,8 @@
 import styles from "./hamburger.module.css"
 
-const Hamburger = ({ isClickedSetter }) => {
+const Hamburger = () => {
     return (
-        <div className={ styles.hamburger }>
-            <img className="hamburgerImage" src="./hamburgerMenu.png"  onClick={ () => isClickedSetter(true) }/>
-        </div>
+        <img className="hamburgerImage" src="./hamburgerMenu.png" />
     )
 }
 

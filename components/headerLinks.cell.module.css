@@ -8,6 +8,8 @@
 .section {
     font-size: 100%;
     color: #17a569;
-    padding: 5%;
+    padding: 2%;
+    margin: 5%;
     border-bottom: 1px solid #17a569;
+    font-weight: bold;
 }
