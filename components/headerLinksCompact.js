@@ -3,27 +3,27 @@ import Hamburger from "./hamburger"
 import HeaderLinks from "./headerLinks";
 import styles from "./headerLinksCompact.module.css"
 
-// THIS WILL NEED TO BE TESTED ON CELL BROWSER
+// Will need to adjust this as when you click a link, the dropdown still stays there
 
-const HeaderLinksCompact = (props) => {
-    const [ isHovered, setIsHovered ] = useState(false)
+const HeaderLinksCompact = ( props ) => {
+    const [ isHovered, setIsHovered ] = useState( false )
 
-    const changeIsHovered = (value) => {
-        setIsHovered(value);
+    const changeIsHovered = ( value ) => {
+        setIsHovered( value );
     }
 
     return (
         <div className={ `${ isHovered ? styles.dropDownLinks : styles.dropDown }` }
-            onMouseEnter={() => changeIsHovered(true)}
-            onMouseLeave={() => changeIsHovered(false)}
+            onMouseEnter={ () => changeIsHovered(true) }
+            onMouseLeave={ () => changeIsHovered(false) }
         >
             { isHovered ? 
-                (<div className = "test">
-                    <HeaderLinks questionaireSetter={ props.questionaireSetter } flexDirection={ props.flexDirection }/>
+                ( <div className = "test">
+                    <HeaderLinks currentPageSetter={ props.currentPageSetter } flexDirection={ props.flexDirection }/>
                 </div> ) : 
-                (<div className = { styles.sdropDowns }>
+                ( <div className = { styles.sdropDowns }>
                     <Hamburger isHoveredSetter={ changeIsHovered } />
-                </div>)
+                </div> )
             }
         </div>
     )};

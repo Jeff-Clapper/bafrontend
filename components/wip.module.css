@@ -1,0 +1,19 @@
+.wipBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #17a569;
+    border-radius: 15px;
+    padding: 1%;
+    margin: 1%;
+    background-color: #ffffff;
+    height: 60vh;
+}
+
+.wipTitle {
+    color: #17a569;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+}

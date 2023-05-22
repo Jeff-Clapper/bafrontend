@@ -3,15 +3,15 @@ import HeaderLinks from "./headerLinks"
 import HeaderLinksCompact from "./headerLinksCompact"
 
 // Children seems to be a built in option
-const Header = (props) => {
+const Header = ( props ) => {
     let flexDirection="row"
     let width = 600;
     let smallScreen = false;
 
-    if (props.screenSize){
+    if ( props.screenSize ){
         width = props.screenSize.width;
     };
-    if (width < 600) {
+    if ( width < 600 ) {
         flexDirection="column";
         smallScreen = true
     };
@@ -19,11 +19,11 @@ const Header = (props) => {
 
     return (
         <>
-            <header className={`${smallScreen ? styles.rowSmallScreen :  styles.row }` }>
+            <header className={ `${smallScreen ? styles.rowSmallScreen :  styles.row }` }>
                 <div className={ styles.bannerLogo }>
                     <img className={ styles.logo } src="./high-res-white-logo.jpg" alt="logo" />
                 </div>
-                { smallScreen ? <HeaderLinksCompact questionaireSetter={ props.questionaireSetter } flexDirection={ flexDirection } /> : <HeaderLinks questionaireSetter={ props.questionaireSetter } flexDirection={ flexDirection }/> }
+                { smallScreen ? <HeaderLinksCompact currentPageSetter={ props.currentPageSetter } flexDirection={ flexDirection } /> : <HeaderLinks currentPageSetter={ props.currentPageSetter } flexDirection={ flexDirection }/> }
             </header>
             <div className={ styles.rowBorder }></div>
         </>

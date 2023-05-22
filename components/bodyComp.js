@@ -2,7 +2,7 @@ import BodyCompImg from "./bodyCompImg"
 import styles from "./bodyComp.module.css"
 import ContactUs from "./contactUs";
 
-const BodyComp = (props) => {
+const BodyComp = ( props ) => {
     let hasFrontDecal = props.hasOwnProperty('decal') && props.decalPlacement=='front' && props.width > 600;
     let hasBackDecal = props.hasOwnProperty('decal') && (props.decalPlacement=='back' || props.width <= 600);
     let isContactBlock = props.style=="contact";
@@ -13,7 +13,7 @@ const BodyComp = (props) => {
             <div className={ props.style }>
                 <h3 className={ styles.title }>{ props.bodyTitle }</h3>
                 <p className={ styles.data } >{ props.bodyText }</p>
-                { isContactBlock ? <ContactUs questionaireSetter = {props.questionaireSetter}/> : false }
+                { isContactBlock ? <ContactUs currentPageSetter = {props.currentPageSetter}/> : false }
             </div>
             { hasBackDecal ? <BodyCompImg decal={ props.decal } width={ props.width }/> : false }
         </div>

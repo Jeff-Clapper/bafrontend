@@ -1,17 +1,17 @@
 import styles from "./footer.module.css"
 
-const Footer = ({questionaireSetter}) => {
+const Footer = ({ currentPageSetter }) => {
     return (
         <div className={ styles.row }>
             <div className={ styles.data }>
                 <div className={ styles.section }>
-                    <a>About Us</a>
+                    <a onClick={ () => {currentPageSetter("wip")} }>About Us</a>
                 </div>
                 <div className={ styles.section }>
-                    <a onClick={() => {questionaireSetter()}}>Contact Us</a>
+                    <a onClick={ () => {currentPageSetter("quoteRequest")} }>Contact Us</a>
                 </div>
                 <div className={ styles.section }>
-                    <a>Careers</a>
+                    <a onClick={ () => {currentPageSetter("wip")} }>Careers</a>
                 </div>
             </div>
         </div>

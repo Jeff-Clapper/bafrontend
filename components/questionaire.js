@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import styles from "./questionaire.module.css"
+import ReturnHome from "./returnHome"
 
 
 
-const Questionaire = ({questionaireSetter,screenSize}) => {
+const Questionaire = ({ currentPageSetter, screenSize }) => {
     const emptyRequestor = {
         name: 'name', 
         company: 'company', 
@@ -15,11 +16,11 @@ const Questionaire = ({questionaireSetter,screenSize}) => {
         e.preventDefault();
         console.log(requestor);
         postRequestor(requestor);
-        questionaireSetter();
+        currentPageSetter("home");
     }
-    const change = (e) => setQuoteRequest({ ...requestor, [e.target.name]: e.target.value});
+    const change = (e) => setQuoteRequest( { ...requestor, [e.target.name]: e.target.value} );
 
-    const postRequestor = async (requestor) => {
+    const postRequestor = async ( requestor ) => {
         // await fetch('http://localhost:5824/request/quote', {
         await fetch('https://emailbackend-rkgklr7fuq-ue.a.run.app/request/quote', {
             method: "POST",
@@ -28,7 +29,7 @@ const Questionaire = ({questionaireSetter,screenSize}) => {
                 "Content-Type": "application/json",
                 // 'X-CSRFTOKEN': "",
             },
-            body: JSON.stringify(requestor),
+            body: JSON.stringify( requestor ),
         })
 
         console.log("success")
@@ -73,9 +74,7 @@ const Questionaire = ({questionaireSetter,screenSize}) => {
                         Submit
                     </div>
                 </div>
-                <div className={ styles.returnButton }>
-                    <p onClick={() => {questionaireSetter()}}>Return to Homepage</p>
-                </div>
+                <ReturnHome currentPageSetter= { currentPageSetter } />
             </form>
         </div>
     )

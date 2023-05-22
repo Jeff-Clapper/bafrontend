@@ -44,11 +44,3 @@
 .userInput {
     width: 70%;
 }
-
-.returnButton {
-    display: flex;
-    justify-content: space-evenly;
-    font-weight: bolder;
-    font-size: small;
-    color: #17a569;
-}

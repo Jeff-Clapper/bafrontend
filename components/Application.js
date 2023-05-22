@@ -3,26 +3,25 @@ import Header from "./header";
 import Body from "./body";
 import Footer from "./footer";
 import Questionaire from "./questionaire"
+import Wip from "./wip";
 
 
 const Application = () => {
-    const [questionaireState, setQuestionaireState] = useState();
-    const [showComponent, setShowComponent] = useState(false);
-    const [screenSize, setScreenSize] = useState(getCurrentDimension());
+    const [currentPageState, setCurrentPageState] = useState("home");
+    const [screenSize, setScreenSize] = useState(useEffect(()=> {
+        setScreenSize({width: window.innerWidth, height: window.innerHeight})
+    }, []));
 
-    const changeQuestionaireState = () => {
-        questionaireState ? setQuestionaireState(false) : setQuestionaireState(true)
+
+    const changeCurrentPageState = ( value ) => {
+        setCurrentPageState( value );
     }
 
-    function getCurrentDimension(){
-        useEffect(()=> {
-            setScreenSize({width: window.innerWidth, height: window.innerHeight})
-        }, [])
-    }
 
     // useEffect(() => {
     //     const updateDimension = () => {
-    //         setScreenSize(getCurrentDimension())
+    //     Below used to be "setScreenSize(deletedFunction())""
+    //         setScreenSize(useEffect(()=> {setScreenSize({width: window.innerWidth, height: window.innerHeight}) }, []))
     //     }
     //     window.addEventListener('resize', updateDimension);
 
@@ -44,9 +43,9 @@ const Application = () => {
                     </div>
                 </div> */}
 
-                <Header questionaireSetter = { changeQuestionaireState } screenSize= { screenSize } />
-                { questionaireState ? <Questionaire questionaireSetter = { changeQuestionaireState } screenSize= { screenSize } /> : <Body questionaireSetter = { changeQuestionaireState } screenSize= { screenSize }/> }
-                <Footer questionaireSetter = { changeQuestionaireState }/>
+                <Header currentPageSetter = { changeCurrentPageState } screenSize= { screenSize } />
+                { currentPageState =="quoteRequest" ? <Questionaire currentPageSetter = { changeCurrentPageState } screenSize= { screenSize } /> : currentPageState =="wip" ? <Wip currentPageSetter = { changeCurrentPageState } /> : <Body currentPageSetter = { changeCurrentPageState } screenSize= { screenSize }/> }
+                <Footer currentPageSetter = { changeCurrentPageState }/>
             </div>
     )
 };
