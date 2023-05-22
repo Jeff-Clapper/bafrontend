@@ -1,6 +1,4 @@
-.bodyCompBlock {
-    display: inline-flex;
-    /* width: 60vw; */
+.bodyCompBlock, .bodyCompBlockSmallScreen {
     justify-content: center;
     border: 1px solid #17a569;
     border-radius: 15px;
@@ -8,6 +6,16 @@
     margin: 1%;
     background-color: #ffffff;
 }
+
+.bodyCompBlock {
+    display: inline-flex;
+}
+
+.bodyCompBlockSmallScreen {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .title {
     color: #17a569;

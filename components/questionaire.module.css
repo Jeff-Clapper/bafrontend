@@ -28,10 +28,17 @@
     padding: 1%;
 }
 
-.label {
+.label, .labelSmallScreen {
     text-align: left;
-    width: 30%;
     font-weight:bolder;
+}
+
+.label {
+    width: 30%;
+}
+
+.labelSmallScreen {
+    width: 40%;
 }
 
 .userInput {

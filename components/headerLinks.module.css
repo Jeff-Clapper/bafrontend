@@ -1,12 +1,25 @@
-.bannerContent {
+.bannerContent, .bannerContentSmallScreen {
     margin: 2%;
-    width: 100%;
     display: flex;
     justify-content: right;
 }
 
-.section {
+.bannerContent {
+    width: 100%;
+}
+
+.bannerContentSmallScreen {
+    flex-direction: column;
+}
+
+.section, .sectionSmallScreen {
     font-size: 100%;
     color: #17a569;
     padding: 2%
+}
+
+.sectionSmallScreen {
+    margin: 5%;
+    border-bottom: 1px solid #17a569;
+    font-weight: bold;
 }

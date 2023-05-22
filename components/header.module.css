@@ -1,11 +1,18 @@
-.row {
+.row, .rowSmallScreen {
     display: flex;
-    justify-content: left;
     align-items: center;
     height: 15vh;
     background-color: white;
     border-radius: 15px;
     border: #17a569 1px solid;
+}
+
+.row {
+    justify-content: left;
+}
+
+.rowSmallScreen {
+    justify-content: space-evenly;
 }
 
 .bannerLogo {

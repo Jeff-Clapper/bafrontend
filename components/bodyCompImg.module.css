@@ -1,23 +1,18 @@
 .image {
-    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 
-#picture {
+#picture, #pictureSmallScreen {
     height: 50vh;
-    
-    /* width: 75%; */
-}
-
-.leftRound {
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
 }
 
-.rightRound {
-    border-bottom-right-radius: 15px;
-    border-top-right-radius: 15px;
+#pictureSmallScreen {
+    width: 75%;
 }

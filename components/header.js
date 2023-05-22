@@ -1,5 +1,4 @@
-import styles1 from "./header.module.css"
-import styles2 from "./header.cell.module.css"
+import styles from "./header.module.css"
 import HeaderLinks from "./headerLinks"
 import HeaderLinksCompact from "./headerLinksCompact"
 
@@ -7,7 +6,6 @@ import HeaderLinksCompact from "./headerLinksCompact"
 const Header = (props) => {
     let flexDirection="row"
     let width = 600;
-    let styles = styles1;
     let smallScreen = false;
 
     if (props.screenSize){
@@ -15,14 +13,13 @@ const Header = (props) => {
     };
     if (width < 600) {
         flexDirection="column";
-        styles = styles2;
         smallScreen = true
     };
 
 
     return (
         <>
-            <header className={ styles.row }>
+            <header className={`${smallScreen ? styles.rowSmallScreen :  styles.row }` }>
                 <div className={ styles.bannerLogo }>
                     <img className={ styles.logo } src="./high-res-white-logo.jpg" alt="logo" />
                 </div>

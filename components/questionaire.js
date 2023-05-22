@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import styles1 from "./questionaire.module.css"
-import styles2 from "./questionaire.cell.module.css"
+import React, { useState } from "react";
+import styles from "./questionaire.module.css"
+
 
 
 const Questionaire = ({questionaireSetter,screenSize}) => {
@@ -34,17 +34,12 @@ const Questionaire = ({questionaireSetter,screenSize}) => {
         console.log("success")
     };
 
-    let styles = styles1;
-    if (screenSize && screenSize.width < 600){
-        styles = styles2
-    }
-
     return (
         <div id={ styles.questionaireBody }>
             <h3 className={ styles.questionaireTitle }>We are excited for the opportunity to get to know you, your company, and your companies needs.</h3>
             <form onSubmit={ submit } className={ styles.formInputs }>
                 <div className={ styles.input }>
-                    <label className={ styles.label }>Name:</label>
+                    <label className={ `${ screenSize && screenSize.width < 600 ? styles.labelSmallScreen : styles.label }` } >Name:</label>
                     <input 
                         className={ styles.userInput }
                         type="text" 
@@ -54,7 +49,7 @@ const Questionaire = ({questionaireSetter,screenSize}) => {
                     />
                 </div>
                 <div className={ styles.input }>
-                    <label className={ styles.label }>Company:</label>
+                    <label className={ `${ screenSize && screenSize.width < 600 ? styles.labelSmallScreen : styles.label }` }>Company:</label>
                     <input  
                         className={ styles.userInput }
                         type="text" 
@@ -64,7 +59,7 @@ const Questionaire = ({questionaireSetter,screenSize}) => {
                     />
                 </div>
                 <div className={ styles.input }>
-                    <label className={ styles.label }>Email:</label>
+                    <label className={ `${ screenSize && screenSize.width < 600 ? styles.labelSmallScreen : styles.label }` }>Email:</label>
                     <input 
                         className={ styles.userInput }
                         type="email" 
